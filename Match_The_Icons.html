@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="el-GR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match The Icons</title>
+    <link rel="stylesheet" type="text/css" href="match_them.css" />
+    <link rel="icon" type="image/x-icon" href="happy_face.ico">
+</head>
+<body>
+    <audio src="start_song.mp3" id="myAudio" loop="loop" autoplay="autoplay" controls autoplay style="visibility: hidden;">
+    <audio src="fail_sound.mp3" id="myAudioFail" autoplay="autoplay" controls autoplay style="visibility: hidden;"></audio>
+    <audio src="success_sound.mp3" id="myAudioSuccess" autoplay="autoplay" controls autoplay style="visibility: hidden;"></audio>
+    </audio>    
+    <img src="happy_face.png" alt="happy_face" style="width:13%; height:18%;margin-top:30px; position:absolute; left:13%;">
+    <div id="info_div">
+        <p>Programmed, designed and developed</br>
+        by Serafina Panagiotaki, &copy; Copyright 2023</p>
+        <img src="qrcode_CV.png" alt="qr_code_CV" style="width:150px; height:150px;margin-top: 50px;">
+        <legend>Scan me</legend>    
+    </div>  
+    <div id="congrats">
+        <h2>Συγχαρητήρια!!! Τα κατάφερες!!!</h2>
+    </div>  
+    <h1 id="title">
+        Match The Icons
+    </h1>
+    <h2 id="subtitle">
+        Try your memory skills and match the icons!
+    </h2>
+    <h3 id="selection">
+        Select difficulty level:
+    </h3>
+    <div><br>
+    <center>
+        <input type="button" value="New Game" id="new" class="buttons" />
+        <input type="button" value="Easy" id="Easy" class="buttons" />
+        <input type="button" value="Medium" id="Medium" class="buttons" />
+        <input type="button" value="Hard" id="Hard" class="buttons" /> 
+        <input type="button" value="Info" id="info" class="buttons" />
+        <div class="main_field" id="easy">
+            <img class="game" src="purple.png" id="e0" onclick="checkImg('e0', show)"/>
+            <img class="game" src="purple.png" id="e1" onclick="checkImg('e1', show)"/>
+            <img class="game" src="purple.png" id="e2" onclick="checkImg('e2', show)"/>
+            <img class="game" src="purple.png" id="e3" onclick="checkImg('e3', show)"/></br>
+            <img class="game" src="purple.png" id="e4" onclick="checkImg('e4', show)"/>
+            <img class="game" src="purple.png" id="e5" onclick="checkImg('e5', show)"/>
+            <img class="game" src="purple.png" id="e6" onclick="checkImg('e6', show)"/>
+            <img class="game" src="purple.png" id="e7" onclick="checkImg('e7', show)"/></br>
+            <img class="game" src="purple.png" id="e8" onclick="checkImg('e8', show)"/>
+            <img class="game" src="purple.png" id="e9" onclick="checkImg('e9', show)"/>
+            <img class="game" src="purple.png" id="e10" onclick="checkImg('e10', show)"/>
+            <img class="game" src="purple.png" id="e11" onclick="checkImg('e11', show)"/>
+        </div>          
+        <div class="main_field" id="medium">
+            <img class="game" src="purple.png" id="m0" onclick="checkImg('m0', show)"/>
+            <img class="game" src="purple.png" id="m1" onclick="checkImg('m1', show)"/>
+            <img class="game" src="purple.png" id="m2" onclick="checkImg('m2', show)"/>
+            <img class="game" src="purple.png" id="m3" onclick="checkImg('m3', show)"/></br>
+            <img class="game" src="purple.png" id="m4" onclick="checkImg('m4', show)"/>
+            <img class="game" src="purple.png" id="m5" onclick="checkImg('m5', show)"/>
+            <img class="game" src="purple.png" id="m6" onclick="checkImg('m6', show)"/>
+            <img class="game" src="purple.png" id="m7" onclick="checkImg('m7', show)"/></br>
+            <img class="game" src="purple.png" id="m8" onclick="checkImg('m8', show)"/>
+            <img class="game" src="purple.png" id="m9" onclick="checkImg('m9', show)"/>
+            <img class="game" src="purple.png" id="m10" onclick="checkImg('m10', show)"/>
+            <img class="game" src="purple.png" id="m11" onclick="checkImg('m11', show)"/></br>
+            <img class="game" src="purple.png" id="m12" onclick="checkImg('m12', show)"/>
+            <img class="game" src="purple.png" id="m13" onclick="checkImg('m13', show)"/>
+            <img class="game" src="purple.png" id="m14" onclick="checkImg('m14', show)"/>
+            <img class="game" src="purple.png" id="m15" onclick="checkImg('m15', show)"/>            
+        </div>           
+        <div class="main_field" id="hard">
+            <img class="game" src="purple.png" id="h0" onclick="checkImg('h0', show)"/>
+            <img class="game" src="purple.png" id="h1" onclick="checkImg('h1', show)"/>
+            <img class="game" src="purple.png" id="h2" onclick="checkImg('h2', show)"/>
+            <img class="game" src="purple.png" id="h3" onclick="checkImg('h3', show)"/>
+            <img class="game" src="purple.png" id="h4" onclick="checkImg('h4', show)"/>
+            <img class="game" src="purple.png" id="h5" onclick="checkImg('h5', show)"/></br>
+            <img class="game" src="purple.png" id="h6" onclick="checkImg('h6', show)"/>
+            <img class="game" src="purple.png" id="h7" onclick="checkImg('h7', show)"/>
+            <img class="game" src="purple.png" id="h8" onclick="checkImg('h8', show)"/>
+            <img class="game" src="purple.png" id="h9" onclick="checkImg('h9', show)"/>
+            <img class="game" src="purple.png" id="h10" onclick="checkImg('h10', show)"/>
+            <img class="game" src="purple.png" id="h11" onclick="checkImg('h11', show)"/></br>
+            <img class="game" src="purple.png" id="h12" onclick="checkImg('h12', show)"/>
+            <img class="game" src="purple.png" id="h13" onclick="checkImg('h13', show)"/>
+            <img class="game" src="purple.png" id="h14" onclick="checkImg('h14', show)"/>
+            <img class="game" src="purple.png" id="h15" onclick="checkImg('h15', show)"/>
+            <img class="game" src="purple.png" id="h16" onclick="checkImg('h16', show)"/>
+            <img class="game" src="purple.png" id="h17" onclick="checkImg('h17', show)"/></br>
+            <img class="game" src="purple.png" id="h18" onclick="checkImg('h18', show)"/>
+            <img class="game" src="purple.png" id="h19" onclick="checkImg('h19', show)"/>
+            <img class="game" src="purple.png" id="h20" onclick="checkImg('h20', show)"/>
+            <img class="game" src="purple.png" id="h21" onclick="checkImg('h21', show)"/>
+            <img class="game" src="purple.png" id="h22" onclick="checkImg('h22', show)"/>
+            <img class="game" src="purple.png" id="h23" onclick="checkImg('h23', show)"/>
+        </div>
+        <div class="main_field" id="game_options">
+            <div id="kids">
+                <img id="kid_img" src="kids.png" alt="kids_game" width="150px" height="200px">
+                <legend id="leg_1">For kids</legend>
+            </div>
+            <div id="adults">
+                <img id="adult_img" src="adults.png" alt="adults_game" width="150px" height="200px">
+                <legend id="leg_2">For adults</legend>
+            </div>
+        </div>
+        <input type="button" value="Κρύψε το πεδίο" id="hide" class="buttons" />
+    </center>
+    <script>        
+        var icons;              //global μεταβλητή για το πλήθος των εικόνων.
+        var counter=0;          //μεταβλητή που χρησιμοποιείται για τη σύγκριση εικόνων στην function chekImg().      
+        var id_num;             //μεταβλητές που χρησιμοποιούνται για το πέρασμα της id αργότερα. 
+        var id_number;          //μεταβλητές που χρησιμοποιούνται για το πέρασμα της id αργότερα. 
+        var purpleArray=[];     //δήλωση πίνακα purpleArray.
+        var purpleArrayCopy=[]; //δήλωση πίνακα purpleArrayCopy.
+        var compare=[];       //δήλωση πίνακa συγκρίσεων (εικόνες).
+        var compareIndex=[];  //δήλωση πίνακa συγκρίσεων (indexes).
+        var hits;               //μεταβλητή που μετρά το πλήθος των επιτυχημένων ταιριασμάτων (χρησιμοποιείται για τον τερματισμό 
+                                //του παιχνιδιού.)
+        var sound_mode=0;       //μεταβλητή που καθορίζει να θα ξεκινήσει ή όχι η μουσική στο παιχνίδι.
+        var images=[];          //αρχικοποίηση (κενού) πίνακα εικόνων, ποικίλλουν ανάλογα με το game_mode (kids, adults).
+        var bool;               //βοηθητκή μεταβλητή τύπου boolean.
+        //Νέο παιχνίδι - καθαρισμός οθόνης.
+        document.getElementById("new").addEventListener("click", function(){
+            location="match_the_icons.html";
+        });
+        //πληροφορίες παιχνιδιού και qr-code.
+        document.getElementById("info").addEventListener("click", function(){
+            if(document.getElementById("info_div").style.visibility=="hidden"){
+                document.getElementById("info_div").style.visibility="visible";
+                document.getElementById("info").value="Hide Info";
+            }else{
+                document.getElementById("info_div").style.visibility="hidden";
+                document.getElementById("info").value="Info";
+            }
+            document.getElementById("myAudio").play(); 
+        });
+        //όλες οι εικόνες.
+        //πε΄ριπτωση kids game_option:
+        document.getElementById("kid_img").addEventListener("click", function(){
+            images=["mickey_mouse.png", "minie_mouse.png", "doggy.png", "princess.png", "donald_duck.png", "goofy.png", 
+            "twittie.png", "tom_jerry.png", "chip_dale.png", "cartoon.png", "doggy2.png", "disney.png"]; 
+            document.getElementById("game_options").style.display="none";
+            document.getElementById("myAudio").play();
+            sound_mode=0;     
+        });        
+        //περίπτωση adults game_option:
+        document.getElementById("adult_img").addEventListener("click", function(){
+            images=["vase.png", "scissors.png", "basketball.png", "glasses.png", "baby.png", "house.png", "car.png", "umbrella.png", 
+            "wave.png", "chair.png", "tablet.png", "iphone.png"]; 
+            document.getElementById("game_options").style.display="none";
+            document.getElementById("myAudio").play();
+            sound_mode=0;             
+        });
+        //άδειασμα των πινάκων για περίπτωση νέου παιχνιδιού.
+        function clearArrays(){
+            hits=0;
+            purpleArray=[];
+            purpleArrayCopy=[];
+        }
+        //επιλογή: --> easy level
+        document.getElementById("Easy").addEventListener("click", function(){
+            document.getElementById("easy").style.display="block";
+            document.getElementById("medium").style.display="none";
+            document.getElementById("hard").style.display="none";
+            document.getElementById("hide").style.display="block";
+            document.getElementById("hide").value="Κρύψε το πεδίο";
+            document.getElementById("info_div").style.visibility="hidden";
+            document.getElementById("congrats").style.visibility="hidden";            
+            document.getElementById("myAudio").play();
+            sound_mode=0;
+            icons=12;            
+            clearArrays();          //άδειασμα των πινάκων για περίπτωση νέου παιχνιδιού.
+            makePurpleArray(icons);
+            randomNumber(icons);            
+        });
+         //επιλογή: --> medium level
+        document.getElementById("Medium").addEventListener("click", function(){
+            document.getElementById("medium").style.display="block";
+            document.getElementById("easy").style.display="none";
+            document.getElementById("hard").style.display="none";
+            document.getElementById("hide").style.display="block";
+            document.getElementById("hide").value="Κρύψε το πεδίο";
+            document.getElementById("info_div").style.visibility="hidden";
+            document.getElementById("congrats").style.visibility="hidden";
+            document.getElementById("myAudio").play();
+            sound_mode=0;
+            icons=16;            
+            clearArrays();          //άδειασμα των πινάκων για περίπτωση νέου παιχνιδιού.
+            makePurpleArray(icons);
+            randomNumber(icons);            
+        });    
+         //επιλογή: --> hard level  
+        document.getElementById("Hard").addEventListener("click", function(){
+            document.getElementById("hard").style.display="block";
+            document.getElementById("medium").style.display="none";
+            document.getElementById("easy").style.display="none";
+            document.getElementById("hide").style.display="block";
+            document.getElementById("hide").value="Κρύψε το πεδίο";
+            document.getElementById("info_div").style.visibility="hidden";
+            document.getElementById("congrats").style.visibility="hidden";
+            document.getElementById("myAudio").play();
+            sound_mode=0;
+            icons=24;            
+            clearArrays();          //άδειασμα των πινάκων για περίπτωση νέου παιχνιδιού.
+            makePurpleArray(icons);
+            randomNumber(icons);            
+        });   
+        //εμφάνιση-απόκρυψη πεδίου.
+        document.getElementById("hide").addEventListener("click", function(){
+            ++sound_mode;
+            if(sound_mode==1){
+                document.getElementById("myAudio").pause();                 
+            }
+            let x=document.getElementById("hide").value;
+            //εμφάνιση των εικόνων του πεδίου.
+            if(x=="Κρύψε το πεδίο"){
+                counter=0;
+                hideImg(icons);
+                document.getElementById("hide").value="Εμφάνισε το πεδίο";
+            }else{ //κρύψιμο των εικόνων του πεδίου.
+                counter=0;
+                document.getElementById("hide").value="Κρύψε το πεδίο";
+                showImg(icons, show);                
+            }
+        });
+        //δήλωση του πίνακα (κενός αρχικά) που περιλαμβάνει τις εικόνες που θα εμφαν΄ίζονται στο πεδίο.
+        const show=[];
+        const showCopy=[];
+        function randomNumber(x){
+            //επιλογή x- τυχαίων αριθμών, από 0 έως x-1.
+            const randomNumbers=[x];
+            for(let i=0; i<x;i++){                
+                randomNumbers[i]=Math.floor(Math.random()*x); //τιμές από 0 έως x-1.                  
+                for(j=0; j<i; j++){  //debugging, για την περίπτωση να δώσει η γεννήτρια ίδιο τυχαίο αριθμό με κάποιον προηγούμενο.
+					while(randomNumbers[i]==randomNumbers[j]){
+						randomNumbers[i]=Math.floor(Math.random()*x);
+                        j=0;
+					}                        			
+				}
+            }
+            //εισαγωγή των (x/2) εικόνων σε πίνακα με μήκος x.  
+            for(let i=0; i<x; i++){
+                show[i]=images[randomNumbers[i]%(x/2)];   //κάθε εικόνα περνά ΔΥΟ φορές μέσα στον πίνακα με το %! (πχ 0-6, 1-7 κλπ).                           
+                showCopy[i]=images[randomNumbers[i]%(x/2)]; //αντίγραφο του πίνακα show[].
+            } 
+            showImg(x, show);                                
+        }   
+        //πέρασμα των εικόνων στο πεδίο. 
+        function showImg(z, show){
+            //επιλογή επιπέδου δυσκολίας.
+            switch(z){
+                case 12:                                 //easy level (12 εικόνες).
+                    id_num="e";
+                    break;
+                case 16:                                //medium level (16 εικόνες).
+                    id_num="m";
+                    break; 
+                case 24:                                //hard level (24 εικόνες).
+                    id_num="h";
+                    break;
+            }                                   
+            for(let i=0; i<z; i++){
+                id_number=id_num+i;                     //δημιουργία των κατάλληλων ids για την εισαγωγή των εικόνων στον πίνακα.
+                document.getElementById(id_number).src=show[i];
+            }              
+        }  
+        //δημιουργία πίνακα purpleArray και του αντιγράφου του purpleArrayCopy.
+        function makePurpleArray(x){                    
+            for(let i=0; i<icons; i++){
+                purpleArray[i]="purple.png"; 
+            }      
+            purpleArrayCopy=purpleArray.slice();         //αντίγραφο του πίνακα purpleArray. 
+        }
+        //κρύψιμο των εικόνων στο πεδίο.
+        function hideImg(z){            
+            for(let i=0; i<z; i++){                
+                id_number=id_num+i;
+                document.getElementById(id_number).src=purpleArray[i];                
+            }
+        }  
+        //σύγκριση των επιλογών του χρήστη
+        function checkImg(x, y){
+            ++counter;
+            var image;
+            var index=x.slice(1);
+            image=show[index];  
+            if(counter==1){             //εμφάνιση στην οθόνη ΜΟΝΟ της πρώτης επιλογής του χρήστη.
+                compare=[];             //καθαρισμός των δύο πινάκων και προσθήκη νέων στοιχείων για σύγκριση.
+                compareIndex=[];
+                document.getElementById(x).src=image; 
+            }
+            compareIndex.push(index);
+            compare.push(image);
+            purpleArrayCopy[index]="ok.jpg";            
+            if(counter==2){      //2 επιλογές του χρήστη, γίνεται η σύγκριση τους σε αυτό το σημείο. 
+                console.log("compareIndex[]=", compareIndex);               
+                if(compare[0]==compare[1] && compareIndex[0]!==compareIndex[1]){     //επιτυχημένη επιλογή χρήστη, και αποφυγή ΔΙΠΛΟΥ          
+                    counter=0;                                             //χτυπήματος στο ίδιο εικονίδιο να χαρακτηριστεί ως επιτυχία!
+                    purpleArrayCopy[index]="ok.jpg";
+                    purpleArray=purpleArrayCopy.slice();
+                    hideImg(icons);
+                    document.getElementById("myAudioSuccess").play(); 
+                    ++hits;
+                    if(hits==icons/2){
+                        document.getElementById("congrats").style.visibility="visible";
+                        document.getElementById("myAudio").play();                        
+                    }
+                }else{                                       //αποτυχημένη επιλογή χρήστη, ο αντίγραφος πίνακας (purpleArrayCopy)                                                      
+                    purpleArrayCopy=purpleArray.slice();    //αρχικοποιείται εκ νέου με την τιμή του purpleArray. 
+                    hideImg(purpleArray.length);
+                    counter=0;
+                    document.getElementById("myAudioFail").play();              
+                }                
+                for(i=0; i<2; ++i){             //άδειασμα του πίνακα σύγκρισης για να χρησιμοποιηθεί εκ νέου για νέα σύγκριση.
+                    compare.pop();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+body{
+    background-color: rgb(123, 210, 181);
+}
+#title{
+    text-align: center;
+    font-size: 6em;
+    text-shadow:6px -3px 4px rgb(111, 71, 233);
+    margin-top: 0;
+}
+#subtitle{
+    text-align: center;
+    text-shadow:2px -2px 2px rgb(111, 71, 233);
+    margin-top: -60px;
+}
+#info_div{
+    position:absolute;
+    right: 5px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    visibility: hidden;
+}
+#congrats{
+    position:absolute;
+    right: 20px;
+    bottom: 300px;
+    text-shadow:2px -1px 2px rgb(111, 71, 233);
+    visibility: hidden;
+}
+#info_div p, legend{
+    margin-bottom:-30px; 
+    font-weight:bold;
+    text-shadow:2px -1px 4px rgb(111, 71, 233);
+}
+#selection{
+    text-align: center;
+    margin-top: 20px;
+}
+.buttons{
+   padding: 15px;
+   width: 120px;
+   background-color: rgb(111, 71, 233);
+   border-radius: 4px;
+   margin: 0 30px;
+   color: rgb(75, 191, 152);
+   font-weight: bolder;
+   text-shadow: 2px 2px 2px #000000;
+   box-shadow: 5px -2px 4px #000000;   
+}
+.buttons:hover{
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+    background-color: rgb(131, 108, 199);
+    cursor: pointer;
+}
+.main_field{
+    margin: auto;
+    width: 50%;
+    margin-top: 20px;
+}
+.game{
+    width:65px;
+    height:65px;
+    margin: 5px;
+}
+#hard{
+    display:none;
+    margin-top: 20px;
+}
+#medium, #easy{
+    display:none;
+    margin-top: 20px;
+}
+#hide{
+    display: none;
+    margin-top: 20px;
+    width: 200px;
+}
+img{
+    cursor: pointer;
+}
+#game_options{
+    display:block;
+    width:35%;
+    margin: auto;
+    margin-top: 30px;
+}
+#kids{
+    float:left;
+}
+#adults{
+    float: right;
+}
+#kids:hover, #adults:hover{
+    cursor: pointer;
+}
+#kids:hover img, #adults:hover img{
+    width: 170px;
+    height: 230px;
+}
+#leg_1, #leg_2{
+    color: rgb(76, 22, 238);    
+    font-size: 1.8em;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+#leg_1:hover, #leg_2:hover{
+    text-shadow: 2px 2px 2px #ffffff;
+    font-size: 2em;
+    color: rgb(76, 22, 238);
+}
+#kids:hover leg_1, #adults:hover leg_2{
+    text-shadow: 2px 2px 2px #ffffff;
+    font-size: 2em;
+    color:rgb(111, 71, 233);
+}
